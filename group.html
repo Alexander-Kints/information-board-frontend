@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание группы</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div id="currentTime"></div>
+        <div id="weekType"></div>
+    </div>
+    <div class="container">
+        <button id="backToSearch" class="back-button">Вернуться к поиску</button>
+        <h1 id="groupName"></h1>
+        <p id="groupInfo"></p>
+        <div id="subgroupSelector" class="subgroup-selector"></div>
+        <table id="scheduleTable">
+            <thead>
+                <tr>
+                    <th>Номер занятия</th>
+                    <th>Понедельник</th>
+                    <th>Вторник</th>
+                    <th>Среда</th>
+                    <th>Четверг</th>
+                    <th>Пятница</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Строки таблицы будут добавлены динамически -->
+            </tbody>
+        </table>
+    </div>
+    <script src="header.js"></script>
+    <script src="group-script.js"></script>
+</body>
+</html>

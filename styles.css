@@ -1,0 +1,227 @@
+/* Подключение шрифтов */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7e0;
+    color: #2e7d32;
+    line-height: 1.6;
+}
+
+/* Заголовок "Поиск расписания" */
+.container h1 {
+    text-align: center; /* Выравнивание по центру */
+    font-size: 2.5em; /* Увеличим размер шрифта */
+    margin-bottom: 30px; /* Добавим отступ снизу */
+    color: #1b5e20; /* Цвет заголовка */
+    font-weight: 700; /* Жирный шрифт */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #1b5e20;
+    margin: 0 0 20px;
+}
+
+/* Контейнер */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 90%;
+    margin: 80px auto 20px;
+}
+
+/* Шапка */
+.header {
+    width: 100%;
+    background-color: #2e7d32;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header div {
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 1.1em;
+}
+
+/* Поисковая строка */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#searchInput {
+    padding: 12px;
+    width: 70%;
+    border: 2px solid #2e7d32;
+    border-radius: 8px;
+    margin-right: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #1b5e20;
+}
+
+#searchButton {
+    padding: 12px 25px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#searchButton:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+#searchButton:active {
+    transform: translateY(0);
+}
+
+/* Результаты поиска */
+#results {
+    text-align: left;
+}
+
+.result-item {
+    background-color: #f1f8e9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.result-item h3 {
+    margin: 0;
+    color: #2e7d32;
+    font-size: 1.4em;
+}
+
+.result-item p {
+    margin: 5px 0;
+    color: #4caf50;
+}
+
+/* Пагинация */
+.pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination button:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+.pagination button.active {
+    background-color: #1b5e20;
+}
+
+/* Кнопка "Вернуться к поиску" */
+.back-button {
+    margin-bottom: 20px;
+    padding: 12px 25px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+/* Карточки расписания */
+.schedule-entry {
+    background-color: #f1f8e9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule-entry:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-entry p {
+    margin: 8px 0;
+    color: #4caf50;
+}
+
+/* Таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid #2e7d32;
+    padding: 12px;
+    text-align: center;
+    width: 16.66%;
+    height: 100px;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #2e7d32;
+    color: white;
+    font-weight: 600;
+}
+
+td {
+    background-color: #f1f8e9;
+}
+
+/* Иконки контактов */
+.contacts p i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
