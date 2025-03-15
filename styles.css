@@ -8,15 +8,6 @@ body {
     line-height: 1.6;
 }
 
-/* Заголовок "Поиск расписания" */
-.container h1 {
-    text-align: center; /* Выравнивание по центру */
-    font-size: 2.5em; /* Увеличим размер шрифта */
-    margin-bottom: 30px; /* Добавим отступ снизу */
-    color: #1b5e20; /* Цвет заголовка */
-    font-weight: 700; /* Жирный шрифт */
-}
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     color: #1b5e20;
@@ -193,31 +184,76 @@ h1, h2, h3, h4, h5, h6 {
     color: #4caf50;
 }
 
-/* Таблицы */
-table {
+/* Кнопки выбора подгруппы */
+.subgroup-selector {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.subgroup-selector button {
+    padding: 10px 20px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.subgroup-selector button:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+.subgroup-selector button.active {
+    background-color: #1b5e20;
+    transform: translateY(0);
+}
+
+/* Таблица на странице группы */
+.group-schedule-table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    table-layout: fixed;
+    table-layout: fixed; /* Фиксированная ширина ячеек */
 }
 
-th, td {
+.group-schedule-table th,
+.group-schedule-table td {
     border: 1px solid #2e7d32;
-    padding: 12px;
+    padding: 15px; /* Увеличим отступы */
     text-align: center;
-    width: 16.66%;
-    height: 100px;
-    vertical-align: middle;
+    width: 18%; /* Ширина ячеек (5 дней + время) */
+    height: 120px; /* Фиксированная высота ячеек */
+    vertical-align: top; /* Выравнивание содержимого по верхнему краю */
 }
 
-th {
+.group-schedule-table th {
     background-color: #2e7d32;
     color: white;
     font-weight: 600;
 }
 
-td {
+.group-schedule-table td {
     background-color: #f1f8e9;
+}
+
+/* Содержимое ячеек на странице группы */
+.group-schedule-table .schedule-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Отступ между элементами */
+}
+
+.group-schedule-table .schedule-entry p {
+    margin: 0;
+    font-size: 14px; /* Уменьшим размер шрифта для лучшего отображения */
+    color: #2e7d32;
 }
 
 /* Иконки контактов */
